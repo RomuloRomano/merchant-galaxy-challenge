@@ -1,6 +1,6 @@
 package br.com.thoughtworks.merchant.galaxy.challenge.module.chain;
 
-import br.com.thoughtworks.merchant.galaxy.challenge.module.entity.GalaxySymbol;
+import br.com.thoughtworks.merchant.galaxy.challenge.module.enums.GalaxySymbol;
 
 import java.util.Map;
 import java.util.Set;
@@ -59,7 +59,7 @@ public class DefaultGalaxyRuleCanBeSubtracted extends  GalaxyAbstractRuleBusines
         for(int i = 0; i < charSymbolsNumeralArray.length; i++){
             char currentCharacter= charSymbolsNumeralArray[i];
             int  currentGalaxyNumeralValue = mapGalaxySymbols.get(String.valueOf(currentCharacter)).intValue();
-            char nextCharacter = charSymbolsNumeralArray[i+1];
+
 
 
             if( previousCharacter != ' '){

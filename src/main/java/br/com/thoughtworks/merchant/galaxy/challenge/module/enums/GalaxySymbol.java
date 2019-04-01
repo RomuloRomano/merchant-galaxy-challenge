@@ -1,4 +1,4 @@
-package br.com.thoughtworks.merchant.galaxy.challenge.module.entity;
+package br.com.thoughtworks.merchant.galaxy.challenge.module.enums;
 
 /**
  * Class represent the Symbol Numeral for application

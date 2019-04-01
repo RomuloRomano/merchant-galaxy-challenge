@@ -6,7 +6,7 @@ import org.junit.Test;
  * Class to create some tests  to convert symbol galaxy
  *
  */
-public class ConvertGalaxySymbolTest {
+public class GalaxySymbolConvertTest {
 
 
     @Test

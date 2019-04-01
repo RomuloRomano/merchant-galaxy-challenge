@@ -1,11 +1,8 @@
 package br.com.thoughtworks.merchant.galaxy.challenge.module.chain;
 
 import br.com.thoughtworks.merchant.galaxy.challenge.module.constants.MerchantGalaxyContants;
-import br.com.thoughtworks.merchant.galaxy.challenge.module.entity.GalaxySymbol;
-import br.com.thoughtworks.merchant.galaxy.challenge.module.service.GalaxyLoadSymbolService;
-import br.com.thoughtworks.merchant.galaxy.challenge.module.service.impl.DefaultGalaxyLoadSymbolService;
+import br.com.thoughtworks.merchant.galaxy.challenge.module.enums.GalaxySymbol;
 
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
