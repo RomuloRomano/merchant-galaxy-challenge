@@ -1,4 +1,4 @@
-package br.com.thoughtworks.merchant.galaxy.challenge.module.application;
+package br.com.thoughtworks.merchant.galaxy.challenge.module.helper;
 
 import br.com.thoughtworks.merchant.galaxy.challenge.module.constants.MerchantGalaxyContants;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.enums.GalaxyQuestionType;
@@ -7,26 +7,26 @@ import br.com.thoughtworks.merchant.galaxy.challenge.module.enums.GalaxyQuestion
  *
  * This represent the  question conversation
  */
-public class GalaxyQuestionConversation {
+public class GalaxyQuestionConversationHelper {
 
-    private GalaxyQuestionLine[] galaxyQuestionLine;
+    private GalaxyQuestionLineHelper[] galaxyQuestionLine;
 
-    public GalaxyQuestionConversation() {
+    public GalaxyQuestionConversationHelper() {
         this.initializeQuestionLine();
     }
 
 
     /**
      *
-     * Load all the Type question in the application
+     * Load all the Type question in the helper
      */
 
     private void initializeQuestionLine(){
-        this.galaxyQuestionLine = new GalaxyQuestionLine[MerchantGalaxyContants.MAX_VALUE_QUESTION_];
-        this.galaxyQuestionLine[0] = new GalaxyQuestionLine(GalaxyQuestionType.ASSIGNED, MerchantGalaxyContants.REGEX_PATTERN_ASSINGGNMENT);
-        this.galaxyQuestionLine[1] = new GalaxyQuestionLine(GalaxyQuestionType.CREDITS, MerchantGalaxyContants.REGEX_PATTERN_CREDITS);
-        this.galaxyQuestionLine[2] = new GalaxyQuestionLine(GalaxyQuestionType.QUESTION_HOW_MUCH, MerchantGalaxyContants.REGEX_PETTERN_HOW_MUCH);
-        this.galaxyQuestionLine[3] = new GalaxyQuestionLine(GalaxyQuestionType.QUESTION_HOW_MANY, MerchantGalaxyContants.REGEX_PATTERN_HOW_MANY);
+        this.galaxyQuestionLine = new GalaxyQuestionLineHelper[MerchantGalaxyContants.MAX_VALUE_QUESTION_];
+        this.galaxyQuestionLine[0] = new GalaxyQuestionLineHelper(GalaxyQuestionType.ASSIGNED, MerchantGalaxyContants.REGEX_PATTERN_ASSINGGNMENT);
+        this.galaxyQuestionLine[1] = new GalaxyQuestionLineHelper(GalaxyQuestionType.CREDITS, MerchantGalaxyContants.REGEX_PATTERN_CREDITS);
+        this.galaxyQuestionLine[2] = new GalaxyQuestionLineHelper(GalaxyQuestionType.QUESTION_HOW_MUCH, MerchantGalaxyContants.REGEX_PETTERN_HOW_MUCH);
+        this.galaxyQuestionLine[3] = new GalaxyQuestionLineHelper(GalaxyQuestionType.QUESTION_HOW_MANY, MerchantGalaxyContants.REGEX_PATTERN_HOW_MANY);
     }
 
     /**

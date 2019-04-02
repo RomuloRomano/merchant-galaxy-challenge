@@ -12,11 +12,6 @@ public class DefaultGalaxyRuleCanBeSubtractedTest {
     private  static final String INPUT_SYMBOL_NUMERAL_1 = "MMVXI";
 
 
-
-
-
-
-
     @Test
     public void executeRuleRepeatedSymbolsTest() {
         Assert.assertEquals(-1, getGalaxyChainBusinessRule().apply(INPUT_SYMBOL_NUMERAL).intValue());

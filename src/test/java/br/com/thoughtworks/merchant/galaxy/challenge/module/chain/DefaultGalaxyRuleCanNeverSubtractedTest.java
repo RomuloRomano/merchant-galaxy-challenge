@@ -9,10 +9,7 @@ public class DefaultGalaxyRuleCanNeverSubtractedTest {
 
 
     private   GalaxyChainBusinessRule  galaxyChainBusinessRule;
-
     private  static final String INPUT_SYMBOL_NUMERAL = "VLD";
-
-
 
 
     @Test

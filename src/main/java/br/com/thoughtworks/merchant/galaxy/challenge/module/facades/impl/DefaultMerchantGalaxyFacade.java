@@ -7,7 +7,7 @@ import br.com.thoughtworks.merchant.galaxy.challenge.module.service.impl.Default
 import java.util.Map;
 
 /**
- * Default Merchant Galaxy Facade to be use for application.
+ * Default Merchant Galaxy Facade to be use for helper.
  * The goals to use this pattern is that we  never can programing for concrete implementation just for one interface.
  *
  */
@@ -41,7 +41,7 @@ public class DefaultMerchantGalaxyFacade implements MerchantGalaxayFacade {
 
     /**
      * Inject the Galaxy Load Symbols. In the future we can  user a better spring sulution
-     * in order to inject and manage all of the beans service in the application
+     * in order to inject and manage all of the beans service in the helper
      * @return
      */
 

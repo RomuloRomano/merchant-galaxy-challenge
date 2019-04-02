@@ -1,6 +1,6 @@
 package br.com.thoughtworks.merchant.galaxy.challenge.module.convert;
 
-import br.com.thoughtworks.merchant.galaxy.challenge.module.application.GalaxyTranslateMessage;
+import br.com.thoughtworks.merchant.galaxy.challenge.module.helper.GalaxyTranslateMessageHelper;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.enums.GalaxyQuestionReturnCode;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.service.GalaxyLoadSymbolService;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.service.impl.DefaultGalaxyLoadSymbolService;
@@ -21,7 +21,7 @@ public class DefaultGalaxySymbolConvert implements GalaxySymbolConvert {
 
     private GalaxySymbolValidation galaxySymbolValidation;
 
-    private GalaxyTranslateMessage  galaxyTranslateMessage;
+    private GalaxyTranslateMessageHelper galaxyTranslateMessageHelper;
 
 
 
@@ -85,7 +85,7 @@ public class DefaultGalaxySymbolConvert implements GalaxySymbolConvert {
             case 1 :  result = this.convert(galaxySymbolNumer);
                 break;
 
-            default : result = getGalaxyTranslateMessage().getMessage(GalaxyQuestionReturnCode.INVALID_GALAXY_STRING);
+            default : result = getGalaxyTranslateMessageHelper().getMessage(GalaxyQuestionReturnCode.INVALID_GALAXY_STRING);
         }
 
         return result;
@@ -95,7 +95,7 @@ public class DefaultGalaxySymbolConvert implements GalaxySymbolConvert {
 
     /**
      * Inject the Galaxy Load Symbols. In the future we can  user a better spring sulution
-     * in order to inject and manage all of the beans service in the application
+     * in order to inject and manage all of the beans service in the helper
      * @return
      */
 
@@ -114,10 +114,10 @@ public class DefaultGalaxySymbolConvert implements GalaxySymbolConvert {
     }
 
 
-    public GalaxyTranslateMessage getGalaxyTranslateMessage() {
+    public GalaxyTranslateMessageHelper getGalaxyTranslateMessageHelper() {
         if(galaxyLoadSymbolService == null){
-            galaxyTranslateMessage = new GalaxyTranslateMessage();
+            galaxyTranslateMessageHelper = new GalaxyTranslateMessageHelper();
         }
-        return galaxyTranslateMessage;
+        return galaxyTranslateMessageHelper;
     }
 }

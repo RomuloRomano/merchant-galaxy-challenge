@@ -1,7 +1,7 @@
 package br.com.thoughtworks.merchant.galaxy.challenge.module.enums;
 
 /**
- * Class represent the Symbol Numeral for application
+ * Class represent the Symbol Numeral for helper
  */
 public enum GalaxySymbol {
 

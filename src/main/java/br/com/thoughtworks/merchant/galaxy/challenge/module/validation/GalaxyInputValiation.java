@@ -8,7 +8,7 @@ package br.com.thoughtworks.merchant.galaxy.challenge.module.validation;
 public interface GalaxyInputValiation {
 
     /**
-     * This method will  validation the input instruction for  application
+     * This method will  validation the input instruction for  helper
      *
      * @param input
      * @return TRUE|FALSE

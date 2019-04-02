@@ -4,7 +4,7 @@ package br.com.thoughtworks.merchant.galaxy.challenge.module.facades;
 import java.util.Map;
 
 /**
- * Interface base to serve with facade for application
+ * Interface base to serve with facade for helper
  *
  */
 public interface MerchantGalaxayFacade {

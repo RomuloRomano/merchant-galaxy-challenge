@@ -1,17 +1,17 @@
-package br.com.thoughtworks.merchant.galaxy.challenge.module.application;
+package br.com.thoughtworks.merchant.galaxy.challenge.module.helper;
 
 import br.com.thoughtworks.merchant.galaxy.challenge.module.enums.GalaxyQuestionType;
 
 /**
  * This class  check the line question
  */
-public class GalaxyQuestionLine {
+public class GalaxyQuestionLineHelper {
 
     private GalaxyQuestionType galaxyQuestionType;
     private  String pattern;
 
 
-    public GalaxyQuestionLine(GalaxyQuestionType galaxyQuestionType, String pattern) {
+    public GalaxyQuestionLineHelper(GalaxyQuestionType galaxyQuestionType, String pattern) {
         this.galaxyQuestionType = galaxyQuestionType;
         this.pattern = pattern;
     }

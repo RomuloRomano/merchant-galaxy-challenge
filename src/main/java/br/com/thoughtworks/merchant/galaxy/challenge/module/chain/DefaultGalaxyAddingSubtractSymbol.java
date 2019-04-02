@@ -58,9 +58,10 @@ public class DefaultGalaxyAddingSubtractSymbol  implements GalaxyChainBusinessRu
 
 
 
+
     /**
      * Inject the Galaxy Load Symbols. In the future we can  user a better spring sulution
-     * in order to inject and manage all of the beans service in the application
+     * in order to inject and manage all of the beans service in the helper
      * @return
      */
 

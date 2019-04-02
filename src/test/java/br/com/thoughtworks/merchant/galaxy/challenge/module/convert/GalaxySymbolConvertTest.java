@@ -1,5 +1,6 @@
 package br.com.thoughtworks.merchant.galaxy.challenge.module.convert;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -8,37 +9,22 @@ import org.junit.Test;
  */
 public class GalaxySymbolConvertTest {
 
+    private  GalaxySymbolConvert galaxySymbolConvert;
+
+    private static final String NUMBER_TO_ARABIC = "MMC";
+
+    private static String RESULT_NUMBER_EXPECTED = "2100";
+
 
     @Test
-    public void convertSymbolI(){
-
-    }
-    @Test
-    public void convertSymbolX(){
-
-
-    }
-    @Test
-    public void convertSymbolL(){
-
-    }
-    @Test
-    public void convertSymbolM(){
-
-
-    }
-    @Test
-    public void convertSymbolC(){
-
-    }
-    @Test
-    public void convertSymbolV(){
-
-    }
-    @Test
-    public void convertSymbolD(){
-
+    public void convertGalaxySymbolNumberToArabicTest(){
+        Assert.assertEquals(RESULT_NUMBER_EXPECTED, getGalaxySymbolConvert().convertGalaxySymbolNumberToArabic(NUMBER_TO_ARABIC));
     }
 
-
+    public GalaxySymbolConvert getGalaxySymbolConvert() {
+        if(galaxySymbolConvert == null){
+            galaxySymbolConvert = new DefaultGalaxySymbolConvert();
+        }
+        return galaxySymbolConvert;
+    }
 }

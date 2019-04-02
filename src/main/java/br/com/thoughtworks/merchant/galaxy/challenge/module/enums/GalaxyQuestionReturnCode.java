@@ -1,7 +1,7 @@
 package br.com.thoughtworks.merchant.galaxy.challenge.module.enums;
 
 /**
- * This enum class represent the question error in the application
+ * This enum class represent the question error in the helper
  *
  */
 public enum GalaxyQuestionReturnCode {
