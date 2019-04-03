@@ -1,6 +1,7 @@
 package br.com.thoughtworks.merchant.galaxy.challenge.module.facades;
 
 
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -18,6 +19,13 @@ public interface MerchantGalaxayFacade {
      * @return
      */
     Map<String, Integer> getLoadMerchantGalaxySymbols();
+
+
+    /**
+     * Mehtod processing all the question that will ber anserwer
+     * @return
+     */
+    ArrayList<String> fulfillmentProcessGalaxyQuestion();
 
 
 }

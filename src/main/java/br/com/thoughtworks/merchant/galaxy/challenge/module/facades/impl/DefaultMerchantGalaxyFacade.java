@@ -2,8 +2,11 @@ package br.com.thoughtworks.merchant.galaxy.challenge.module.facades.impl;
 
 import br.com.thoughtworks.merchant.galaxy.challenge.module.facades.MerchantGalaxayFacade;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.service.GalaxyLoadSymbolService;
+import br.com.thoughtworks.merchant.galaxy.challenge.module.service.GalaxyProcessQuestionService;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.service.impl.DefaultGalaxyLoadSymbolService;
+import br.com.thoughtworks.merchant.galaxy.challenge.module.service.impl.DefaultGalaxyProcessQuestionService;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -19,6 +22,11 @@ public class DefaultMerchantGalaxyFacade implements MerchantGalaxayFacade {
      */
     private GalaxyLoadSymbolService  galaxyLoadSymbolService;
 
+    /**
+     * Process Question service
+     */
+    private GalaxyProcessQuestionService galaxyProcessQuestionService;
+
 
     /**
      *
@@ -28,6 +36,10 @@ public class DefaultMerchantGalaxyFacade implements MerchantGalaxayFacade {
 
    }
 
+
+    public ArrayList<String> fulfillmentProcessGalaxyQuestion() {
+        return getGalaxyProcessQuestionService().fulfillmentProcessGalaxyQuestion();
+    }
 
     /**
      * Load  Merchant Galaxy Symbols
@@ -50,5 +62,12 @@ public class DefaultMerchantGalaxyFacade implements MerchantGalaxayFacade {
             galaxyLoadSymbolService = new DefaultGalaxyLoadSymbolService();
         }
         return galaxyLoadSymbolService;
+    }
+
+    public GalaxyProcessQuestionService getGalaxyProcessQuestionService() {
+        if(galaxyProcessQuestionService == null){
+            galaxyProcessQuestionService = new DefaultGalaxyProcessQuestionService();
+        }
+        return galaxyProcessQuestionService;
     }
 }

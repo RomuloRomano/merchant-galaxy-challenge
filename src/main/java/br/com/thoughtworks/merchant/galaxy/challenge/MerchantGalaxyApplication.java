@@ -2,6 +2,7 @@ package br.com.thoughtworks.merchant.galaxy.challenge;
 
 import br.com.thoughtworks.merchant.galaxy.challenge.module.facades.MerchantGalaxayFacade;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.facades.impl.DefaultMerchantGalaxyFacade;
+import br.com.thoughtworks.merchant.galaxy.challenge.module.helper.GalaxyTranslateMessageHelper;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.service.GalaxyProcessQuestionService;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.service.impl.DefaultGalaxyProcessQuestionService;
 import br.com.thoughtworks.merchant.galaxy.challenge.module.validation.GalaxyInputValiation;
@@ -27,22 +28,17 @@ public class MerchantGalaxyApplication {
     public static void main(String[] args)
 
         {
-            System.out.println( "Welcome to GalaxyMerchant ! please provide input below and a blank new line to finish input");
-            System.out.println();
-            GalaxyInputValiation  galaxyInputValiation = new DefaultGalaxyInputValiation();
 
-            GalaxyProcessQuestionService galaxyProcessQuestionService  = new DefaultGalaxyProcessQuestionService();
-
-            ArrayList<String>  output = galaxyProcessQuestionService.fulfillmentProcessGalaxyQuestion();
-            for(int i=0;i<output.size();i++)
-            {
-                System.out.println(output.get(i));
-            }
-
+            GalaxyTranslateMessageHelper.printMessage();
             MerchantGalaxayFacade merchantGalaxayFacade  = new DefaultMerchantGalaxyFacade();
             merchantGalaxayFacade.getLoadMerchantGalaxySymbols();
+            GalaxyTranslateMessageHelper.printResult(merchantGalaxayFacade.fulfillmentProcessGalaxyQuestion());
+
 
     }
+
+
+
 
 
 }
